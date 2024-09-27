@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+
+:root{
+  --azul-marinho: #022840;
+  --azul-escuro: #024873;
+  --azul-claro:#0A8CBF;
+  --preto: #0A0C0D;
+  --body-bg: #BFBDBA;
+  --footer-bg : #8C8A88;
+  --rubro: #700000;
+  --font-principal: "Pixelify Sans", sans-serif;
+  font-size: 16px;
+}
+
+*{
+  color: var(--preto);
+  font-family: var(--font-principal);
+}
+body{
+  background-color: var(--body-bg);
+}
+header{
+  position: sticky;
+  top: 0px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: var(--azul-marinho);
+}
+
+h1{
+  color: var(--rubro);
+  font-size: 3rem;
+  font-weight: 800;
+  text-shadow: 1px 1px 3px #BFBDBA;
+}
+h2{
+  color: var(--azul-marinho);
+  /* font-size: 3rem; */
+  font-weight: 800;
+  text-shadow: 1px 1px 3px var(--azul-escuro);
+}
+main{
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+  margin-left: 14rem;
+  margin-bottom: 1rem;
+}
+
+aside{
+  position: fixed;
+  left: 0px;
+
+  display: inline-block;
+  
+  width: 12rem;
+  height: 100vh;
+  
+  background-color: var(--azul-escuro);
+}
+
+li>a{
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--rubro);
+  text-shadow: 1px 1px 3px black;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#formula{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* grid-template-columns: 15rem 40rem; */
+
+  border: 2px dotted black;
+  border-radius: 15px;
+
+  background-color: var(--footer-bg);
+
+}
+#calculo{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+
+  height: 100%;
+  width: 15rem;
+
+}
+
+label{
+  padding: 3px;
+  border: 1px solid;
+  border-radius: 8px;
+
+  background-color: var(--body-bg);
+}
+input,button{
+  border-radius: 8px;
+  width: 160px;
+}
+button:active{
+  background-color: var(--body-bg);
+}
+
+canvas {
+  display: inline-block;
+
+  /* border: 1px solid black; */
+  width:40rem; 
+  height:30rem;
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  background-color: var(--footer-bg);
+}

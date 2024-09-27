@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gráfico de Função Quadrática</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <header>
+    <h1>Função Quadrática</h1>
+  </header>
+  <aside>
+    <nav>
+      <ul>
+        <li><a href="#uqe"> O que é?</a></li>
+        <li><a href="#historia">História</a></li>
+        <li><a href="#praqserve">Para que serve</a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main>
+    <section id="uqe"> 
+      <h2>o que é</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe adipisci consectetur, sed ex nisi aut libero. Placeat dignissimos officiis doloribus voluptates tempore eius molestias illo, consequatur id atque corrupti deserunt?</p>
+    </section>
+    
+    <section id="historia"> 
+      <h2>História</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe adipisci consectetur, sed ex nisi aut libero. Placeat dignissimos officiis doloribus voluptates tempore eius molestias illo, consequatur id atque corrupti deserunt?</p>
+    </section>
+
+    <section id="praqserve"> 
+      <h2>Para que serve</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe adipisci consectetur, sed ex nisi aut libero. Placeat dignissimos officiis doloribus voluptates tempore eius molestias illo, consequatur id atque corrupti deserunt?</p>
+    </section>
+
+    <section> 
+      <h2>Exemplos</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe adipisci consectetur, sed ex nisi aut libero. Placeat dignissimos officiis doloribus voluptates tempore eius molestias illo, consequatur id atque corrupti deserunt?</p>
+
+    </section>
+    <section>
+      <h2>Fórmula</h2>
+      <div id="formula">
+        <div id="calculo">
+          <label>A: <input type="number" id="a" placeholder="Digite o valor de A"></label>
+          <label>B: <input type="number" id="b" placeholder="Digite o valor de B"></label>
+          <label>C: <input type="number" id="c" placeholder="Digite o valor de C"></label>
+          <label>X: <input type="number" id="x" placeholder="Digite o valor de X"></label>
+          <button onclick="calcular()">Calcular f(x)</button>
+          <div class="result" id="resultado"></div>
+        </div>
+        <canvas id="cartesiano" width="600" height="400"></canvas>
+      </div>
+    </section>
+
+
+  </main>
+  <footer>
+    <small>Developed by morainstein</small>
+  </footer>
+    <script src="script.js"></script>
+    <script>
+ 
+        desenharGrafico(0, 0, 0);
+
+    </script>
+</body>
+</html>
