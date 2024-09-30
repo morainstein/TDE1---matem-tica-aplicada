@@ -44,6 +44,9 @@
             <li class="navlid"><a href="#descriminante">Descriminante</a></li>
           </ul>
         </li>
+        <li class="navliu"><a href="#tabela">Tabela</a></li>
+        <li class="navliu"><a href="#exercicio">Exercício</a></li>
+        <li class="navliu"><a href="#grafico">Gráfico</a></li>
       </ul>
     </nav>
   </aside>
@@ -118,9 +121,9 @@
         <div class="f-row">
           <p id="comportamento">Onde: </p>
           <ul>
-            <li><p><span class="e">𝑎</span>, <span class="e">𝑏</span> e <span class="e">𝑐</span> são constantes (ou coeficientes);</p></li>
-            <li><p><span class="e">𝑥</span> é a variável;</p></li>
-            <li><p><span class="e">𝑎 ≠ 0</span> (se <span class="e">𝑎</span> fosse zero, a equação seria linear, não quadrática).</p></li>
+            <li><span class="e">𝑎</span>, <span class="e">𝑏</span> e <span class="e">𝑐</span> são constantes (ou coeficientes);</li>
+            <li><span class="e">𝑥</span> é a variável;</li>
+            <li><span class="e">𝑎 ≠ 0</span> (se <span class="e">𝑎</span> fosse zero, a equação seria linear, não quadrática).</li>
           </ul>
         </div>
       </div>
@@ -147,10 +150,10 @@
             <p id="raiz"><strong>Vértice:</strong> O ponto onde a parábola atinge seu valor máximo ou mínimo, dependendo da direção da concavidade. A fórmula do vértice <span class="e">𝑉(𝑥<sub class="e">𝑣</sub>,𝑦<sub class="e">𝑣</sub>)</span> pode ser calculada como:</p>
             <ul class="f-row">
               <li>
-                <p><span class="e">𝑥<sub class="e">𝑣</sub> = -𝑏/2𝑎</span></p>
+                <span class="e">𝑥<sub class="e">𝑣</sub> = -𝑏/2𝑎</span>
               </li>
               <li>
-                <p><span class="e">𝑦<sub class="e">𝑣</sub> = 𝑓(𝑥<sub class="e">𝑣</sub>)</span></p>
+                <span class="e">𝑦<sub class="e">𝑣</sub> = -Δ/4𝑎</span>
               </li>
             </ul>
           </li>
@@ -182,7 +185,7 @@
                 <p>Se <span class="e">𝑏²−4𝑎𝑐 = 0</span>, existe <b>uma raiz real</b> (ou seja, a parábola toca o eixo <span class="e">𝑥</span> em um único ponto).</p>
               </li>
               <li>
-                <p>Se <span class="e">𝑏²−4𝑎𝑐 < 0</span>, <b>não existem raízes reais</b> (a parábola não intercepta o eixo <span class="e">𝑥</span>).</p>
+                <p id="tabela">Se <span class="e">𝑏²−4𝑎𝑐 < 0</span>, <b>não existem raízes reais</b> (a parábola não intercepta o eixo <span class="e">𝑥</span>).</p>
               </li>
             </ul>
           </li>
@@ -205,7 +208,7 @@
             <td><img class="imgtab" src="assets/D0Ama.jpg" alt=""></td>
             <td><img class="imgtab" src="assets/DmeAma.jpg" alt=""></td>
           </tr>
-          <tr>
+          <tr id="exercicio">
             <td class="e">𝑎 < 0</td>
             <td><img class="imgtab" src="assets/DmaAme.jpg" alt=""></td>
             <td><img class="imgtab" src="assets/D0Ame.jpg" alt=""></td>
@@ -216,12 +219,24 @@
     </section>
 
     <section> 
-      <h2>Exemplos</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe adipisci consectetur, sed ex nisi aut libero. Placeat dignissimos officiis doloribus voluptates tempore eius molestias illo, consequatur id atque corrupti deserunt?</p>
+      <h2>Exercício</h2>
+      <p>Monte o gráfico da parábola de <span class="e">𝑓(𝑥)= 𝑥² -6𝑥 +5</span> seguindo os passos</p>
+        <ol>
+          <li>Defina a abertura da parábola com base no coeficiente <span class="e">𝑎</span>;</li>
+          <li>Aplique Bhaskara para achar as raízes da função e definir os pontos onde a parábola corta o eixo X;</li>
+          <li>Defina aonde onde a parábola corta o eixo Y através do coeficiente <span class="e">𝑐</span>;</li>
+          <li>Ache o X e o Y do vértice da parábola, através das fórmulas;
+            <ul class="f-row">
+              <li><span class="e">𝑥<sub class="e">𝑣</sub> = -𝑏/2𝑎</span></li>
+              <li><span class="e">𝑦<sub class="e">𝑣</sub> = -Δ/4𝑎</span></li>           
+            </ul>
+          </li>
+          <li id="grafico">Por ultimo, ligue os pontos encontrados no plano cartesiano.</li>
+        </ol>
 
     </section>
     <section>
-      <h2>Fórmula</h2>
+      <h2>Gráfico</h2>
       <div id="formula">
         <div id="calculo">
           <label>A: <input type="number" id="a" placeholder="Digite o valor de A"></label>

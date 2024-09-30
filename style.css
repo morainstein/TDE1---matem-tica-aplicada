@@ -53,7 +53,7 @@ h3{
   font-size: 2.5rem;
 }
 
-p{
+p,li{
   font-size: 2rem;
   /* font-weight: 500; */
 }
@@ -185,7 +185,6 @@ table{
 
   height: 100%;
   width: 15rem;
-
 }
 
 label{
@@ -226,4 +225,14 @@ footer{
   width: 100%;
 
   background-color: var(--footer-bg);
+}
+
+
+@media only screen  and (max-width: 1025px) {
+  aside{
+    display: none;
+  }
+  main{
+    margin: 2rem 3rem;
+  }
 }
