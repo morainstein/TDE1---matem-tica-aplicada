@@ -37,12 +37,13 @@ function desenharGrafico(a, b, c) {
     ctx.lineTo(largura / 2 + x, altura / 2 - y * 10); // Escalar y para caber no canvas
   }
 
-  ctx.strokeStyle = 'blue';
+  ctx.strokeStyle = '#700000';
+  ctx.lineWidth = 2;
   ctx.stroke();
 
 // Função para desenhar coordenadas no plano
 
-  ctx.font = '12px Arial';
+  ctx.font = '1rem Arial';
   ctx.fillStyle = 'black';
 
 // Coordenadas positivas e negativas no eixo X
@@ -58,7 +59,7 @@ function desenharGrafico(a, b, c) {
 
 // Função para desenhar a grade no plano cartesiano
 
-  ctx.strokeStyle = '#e0e0e0';
+  ctx.strokeStyle = '#022840';
   ctx.lineWidth = 1;
 
 // Linhas horizontais
@@ -96,9 +97,6 @@ function calcular() {
   let xv = vertice[0];
   let yv = vertice[1];
 
-  // Calcular o valor da função quadrática
-  let resultado = calcularFuncaoQuadratica(a, b, c, x);
-
   // Exibir o resultado na div "resultado"
   document.getElementById('resultado').innerHTML = "X do Vértice: " + xv + "<br> Y do Vértice: " + yv + "<br>" + mensagem;
   desenharGrafico(a, b, c);
@@ -122,23 +120,6 @@ function calcularRaizes(a, b, c) {
       mensagem = "A equação não possui raízes reais.";
       return { mensagem }; // Não existem raízes reais
   }
-}
-
-// Exemplo de uso:
-let a = 2, b = -4, c = 1;
-let x = 1; // Valor de x para calcular f(x)
-
-console.log("Valor de f(x) para x = " + x + ": " + calcularFuncaoQuadratica(a, b, c, x));
-
-let raizes = calcularRaizes(a, b, c);
-if (raizes) {
-  if (raizes.raiz1 && raizes.raiz2) {
-      console.log("Raízes da equação: " + raizes.raiz1 + " e " + raizes.raiz2);
-  } else {
-      console.log("Raiz única da equação: " + raizes.raizUnica);
-  }
-} else {
-  console.log("A equação não possui raízes reais.");
 }
 
 function calcularVertices(a, b, c){
