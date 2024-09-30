@@ -47,13 +47,13 @@ function desenharGrafico(a, b, c) {
 
 // Coordenadas positivas e negativas no eixo X
   for (let x = 50; x < largura; x += 50) {
-    ctx.fillText((x - centroX) / 50, x, centroY - 5); // Abaixo do eixo X
-    ctx.fillText((centroX - x) / 50, centroX - (x - centroX), centroY - 5); // Acima do eixo X
+    ctx.fillText((x - centroX) / 10, x, centroY - 5); // Abaixo do eixo X
+    // ctx.fillText((centroX - x) / 50, centroX - (x - centroX), centroY - 5); // Acima do eixo X
   }
 
 // Coordenadas positivas e negativas no eixo Y
   for (let y = 50; y < altura; y += 50) {
-    ctx.fillText((centroY - y) / 50, centroX + 5, y + 3); // À direita do eixo Y
+    ctx.fillText((centroY - y) / 10, centroX + 5, y + 3); // À direita do eixo Y
   }
 
 // Função para desenhar a grade no plano cartesiano
