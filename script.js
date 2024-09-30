@@ -87,15 +87,20 @@ function calcular() {
 
   // Verificar se os valores foram preenchidos
   if (isNaN(a) || isNaN(b) || isNaN(c) || isNaN(x)) {
-      document.getElementById('resultado').innerHTML = "Por favor, preencha todos os campos!";
-      return;
+    document.getElementById('resultado').innerHTML = "Por favor, preencha todos os campos!";
+    return;
   }
+  
+  mensagem = calcularRaizes(a,b,c).mensagem;
+  let vertice = calcularVertices(a,b,c);
+  let xv = vertice[0];
+  let yv = vertice[1];
 
   // Calcular o valor da função quadrática
   let resultado = calcularFuncaoQuadratica(a, b, c, x);
 
   // Exibir o resultado na div "resultado"
-  document.getElementById('resultado').innerHTML = "O valor de f(x) = " + resultado;
+  document.getElementById('resultado').innerHTML = "X do Vértice: " + xv + "<br> Y do Vértice: " + yv + "<br>" + mensagem;
   desenharGrafico(a, b, c);
 }
 
@@ -103,16 +108,19 @@ function calcular() {
 // Função que calcula as raízes da equação quadrática usando Bhaskara
 function calcularRaizes(a, b, c) {
   let delta = Math.pow(b, 2) - 4 * a * c;
-
+  let mensagem;
   if (delta > 0) {
       let raiz1 = (-b + Math.sqrt(delta)) / (2 * a);
       let raiz2 = (-b - Math.sqrt(delta)) / (2 * a);
-      return { raiz1, raiz2 }; // Duas raízes reais e distintas
+      mensagem = "Raízes da equação: " + raiz1 + " e " + raiz2;
+      return { raiz1, raiz2 , mensagem}; // Duas raízes reais e distintas
   } else if (delta === 0) {
       let raizUnica = -b / (2 * a);
-      return { raizUnica }; // Uma raiz real (dupla)
+      mensagem = "Raiz única da equação: " + raizUnica;
+      return { raizUnica, mensagem }; // Uma raiz real (dupla)
   } else {
-      return null; // Não existem raízes reais
+      mensagem = "A equação não possui raízes reais.";
+      return { mensagem }; // Não existem raízes reais
   }
 }
 
@@ -131,4 +139,13 @@ if (raizes) {
   }
 } else {
   console.log("A equação não possui raízes reais.");
+}
+
+function calcularVertices(a, b, c){
+
+  let xv = -b / 2 * a;
+  let delta = Math.pow(b, 2) - 4 * a * c;
+  let yv = -delta / 4 * a;
+  
+  return [xv,yv];
 }
